@@ -6,10 +6,9 @@ from selenium.webdriver.support import expected_conditions as EC
 
 def is_element_present(browser, how, what):
     try:
-        browser.find_element(how, what)
+        return browser.find_element(how, what)
     except NoSuchElementException:
         return False
-    return True
 
 
 def wait_title(title, browser, timeout=3):

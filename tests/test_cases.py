@@ -25,10 +25,9 @@ def wait_element(browser, who, timeout=1, how=By.CSS_SELECTOR):
 
 def is_element_present(browser, how, what):
     try:
-        browser.find_element(how, what)
+        return browser.find_element(how, what)
     except NoSuchElementException:
         return False
-    return True
 
 
 def test_administration_login(browser, url):
